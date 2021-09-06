@@ -1,0 +1,197 @@
+body{
+    font-family:Montserrat;
+    word-break: break-word;
+    
+}
+.data-list-container{
+display:flex; 
+margin:10%;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.data-item{    
+flex: 0 0 45%;
+margin-bottom: 54px;
+
+text-align: center;
+
+}
+
+
+.d-w5 {
+display: flex;
+width: 5%;
+}
+
+
+
+.title{
+display: flex-left;
+width: 95%;
+justify-content: center;
+font-size: 30px;
+font-weight: 100;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.27;
+padding: 20px;
+color: white;
+text-align: left;
+}      
+
+#safety-header
+{   background-color: #d84f57;
+width: 100%;
+margin: 0;
+height: 70px;
+display: flex;}
+
+
+
+
+
+.main-content{
+padding: 26px 40px 0px 40px;
+
+}
+img{
+
+border: 1px solid grey;
+border-radius: 0.6rem;
+position: relative;
+
+}
+
+.content{
+
+position: relative;
+
+} 
+
+.container {
+    
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    
+  }
+  
+ 
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+ 
+  .checkmark {
+    position: absolute;
+    top: -180px;
+    left: 220px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid grey;
+  }
+  
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  
+  .container input:checked ~ .checkmark {
+    background-color:#d84f57;
+  }
+  
+ 
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+*, :after, :before{
+box-sizing: border-box;
+}
+
+
+
+.bc{
+display:flex;
+justify-content: center;
+width :100%;
+
+border-radius: 3px;
+background-color:#d84e55;
+font-size: 24px;
+font-weight: 700;
+line-height: 1.25;
+letter-spacing: 2.25px;
+text-align: center;
+color: #fff;
+padding: 18px 50px;
+cursor:pointer;
+}
+.message{
+font-size: 18px;
+font-weight: 1000;
+font-stretch: normal;
+line-height: 1.26;
+
+color: #3d3d3d;
+font-style: normal;
+text-align: left;
+margin-left: 15%;
+}
+
+.heading1{
+display: flex;
+font-size: 23px;
+font-weight: 700;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.26;
+
+color: #3d3d3d;
+}
+.heading2{
+font-size: 18px;
+font-weight: 100;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.26;
+padding-top: 2%;
+color: #3d3d3d;
+}
+.checkbox{
+position:absolute;
+display: none;
+right:0rem;
+top:0px;
+
+}
