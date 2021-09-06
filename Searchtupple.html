@@ -1,14 +1,14 @@
 <html>
     <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700" rel="stylesheet">
+
     <style>
-        body {
+        
+    body {
     font-family: Montserrat;
-    background: #eee;
-    width:100%;
-    height:100%;
+    
+   
      }
 
 *, :after, :before {
@@ -16,10 +16,8 @@
 }
  .bus-list {
     
-    background-color: #fff;
-   
-    width: 100%;
-    height: 100%;
+    background-color: #fff; 
+    padding-inline-start: 0px;
     
 }
 .bus-item {
@@ -49,9 +47,10 @@
 .rest-stop  {
     grid-area: via;
     color: #1446a0;
-    font-size: 12px;
+    font-size: 0.7em;
     align-self: end;
-   
+    padding-bottom: .25em;
+    font-weight:200;
  }
 
  
@@ -60,12 +59,13 @@
     align-self: flex-start;
     grid-area: faretime;
     color: #3e3e52;
-    font-size: 1.02em;
+    font-size: 1em;
     display: inline-flex;
     padding: .25em 0;
     flex: 1;
     white-space: nowrap;
-    height: 1.7rem;
+    height: 1.5rem;
+    font-weight:700;
 }
 .bus-price {
     grid-area: faretime;
@@ -77,12 +77,10 @@
     flex-direction: column;
     padding: .15em 0;
     flex: 1;
-    text-align: right;
+    text-align: left;
     height: 2.4rem;
 }
-.bold-font {
-    font-weight: 700;
-}
+
 .fromRow {
     color: #7e7e8c;
     font-weight: 500;
@@ -100,6 +98,7 @@
     align-items: center;
     flex-basis: 100%;
     height: .9rem;
+    font-weight: 300;
 }
 .middle_dot {
     font-size: 4px;
@@ -120,7 +119,7 @@
     vertical-align: top;
 }
 .less_seats {
-
+    font-weight: 300;
     margin-right: .35em;
 }
 
@@ -151,6 +150,7 @@
     white-space: nowrap;
     color: grey;
     height: 1.7rem;
+    font-weight:300;
 }
 .mid_row_two {
     grid-area: rating;
@@ -160,7 +160,7 @@
     flex-direction: column;
     margin-top: .4em;
     flex-basis: 25%;
-
+    
     height: 3.4rem;
 }
 .rating_badge {
@@ -221,6 +221,7 @@
     font-size: .75em;
     color: #3e3e52;
     margin-top: .3em;
+    margin-bottom: .3em ;
     flex-basis: 100%;
     height: 1.3rem;
 }
@@ -228,6 +229,7 @@
     display: flex;
     align-items: center;
     margin-right: 1em;
+    font-weight: 300;
 }
 
 .persuasion_container .persuasion-item img {
@@ -240,22 +242,24 @@
 }
 
 .feature {
-    font-size: 12px;
+    
     color: #4a4a4a;
     display: flex;
     flex-wrap: nowrap;
-    font-size: .75em;
+    font-size: .5em;
     margin-top: .3em;
     flex-basis: 100%;
     height: 1.3rem;
+    font-weight: 300;
 }
 .feature .txt-block {
     margin-right: 16px;
 }
 .feature .txt-block, .zecafebanner .txt-block {
     border-radius: 3px;
-    background-color: lightblue;
+    background-color: #e5ebf8;
     padding: 2.5px 8px;
+    
     
 }
 .feature .d-color {
@@ -298,17 +302,17 @@
         </head>
         <body>
 
-            <div>
+            
                 <ul id="buslist" class="bus-list">
                     <li class="bus-item" id="1">
                         <span class="rest-stop">
-                            <span class="grey-stop">
+                        
                                 1 REST STOP
-                            </span>
+                            
                            
                         </span>
                         <span class="bus-timing">
-                            <b>21:55</b>
+                            <span class="bold-font">21:55</span>
                             - 05:00
                         </span>
                         <span class="bus-price bold-font">
@@ -317,10 +321,11 @@
                         </span>
                         <span class="other-info">
                             7h 05m
+                        
                             <span class="middle_dot icon icon-dot_divider">
-                                
-                            </span>
-                            <span class="seats_cnt less_seats">22 Seats</span>
+                            </span>   
+                           
+                            <span class="less_seats">22 Seats</span>
                         </span>
                         <span class="sri-durga-details">
                             <span class="travels_name">
@@ -368,9 +373,9 @@
 
                     <li class="bus-item" id="2">
                         <span class="rest-stop">
-                            <span class="grey-stop">
+                            
                                 1 REST STOP
-                            </span>
+                            
                            
                         </span>
                         <span class="red-deals">
@@ -390,7 +395,7 @@
                             <span class="middle_dot icon icon-dot_divider">
                                 
                             </span>
-                            <span class="seats_cnt less_seats">20 Seats</span>
+                            <span class="less_seats">20 Seats</span>
                         </span>
                         <span class="strike-through ilelem">
                             <span>₹ </span>
@@ -441,9 +446,9 @@
 
                     <li class="bus-item" id="3">
                         <span class="rest-stop">
-                            <span class="grey-stop">
+                            
                                 NON STOP
-                            </span>
+                            
                            
                         </span>
                         <span class="bus-timing">
@@ -459,7 +464,7 @@
                             <span class="middle_dot icon icon-dot_divider">
                                 
                             </span>
-                            <span class="seats_cnt less_seats">23 Seats</span>
+                            <span class=less_seats">23 Seats</span>
                         </span>
                         <span class="sri-durga-details">
                             <span class="travels_name">
@@ -489,6 +494,6 @@
                                 
                     </li>
                 </ul>
-            </div>
+            
         </body>>
 </html>
