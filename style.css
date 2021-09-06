@@ -1,5 +1,5 @@
 body{
-    font-family:Montserrat;
+    
     word-break: break-word;
     
 }
@@ -60,6 +60,8 @@ img{
 border: 1px solid grey;
 border-radius: 0.6rem;
 position: relative;
+height:212px;
+width:218px;
 
 }
 
@@ -72,7 +74,7 @@ position: relative;
 .container {
     
     position: relative;
-    padding-left: 35px;
+  
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -84,15 +86,16 @@ position: relative;
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    top: -180px;
+    left: 220px;
+    
   }
   
  
   .checkmark {
     position: absolute;
     top: -180px;
-    left: 220px;
+    left: 185px;
     height: 25px;
     width: 25px;
     background-color: #eee;
@@ -195,3 +198,5 @@ right:0rem;
 top:0px;
 
 }
+
+
