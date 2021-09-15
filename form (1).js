@@ -16,48 +16,22 @@ const getFormData = () => {
   };
 
 
-function checkEmail(){
-  var email= document.getElementById("email");
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if(email.value.match(mailformat))
-  {return true;
+
+function checkAll(){
+  var flag=0;
+  for (const element of formElements){
+  if(element.name !="gender" && element.name != "submit" && element.name!="reset" && element.name !="date of birth" && element.name !="save" && element.name !="address" ){
+  var mobformat = new RegExp(document.getElementById(element.name).pattern);
+  if( !element.value.match( mobformat ) )
+  {  alert("You have entered an invalid "+ element.name+ "!");
+flag=1;
   }
-  else
-  {
-  alert("You have entered an invalid email address!");
-  return false;
-  }
-  
+  }}
+  if (flag==1){return false;}
+
+  else{return true;}
 }
 
-function checkPass(){
-  var pass = document.getElementById("pass");
-  var passformat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/;
-  if(pass.value.match(passformat))
-  {return true;
-  }
-  else
-  {
-  alert("You have entered an invalid password!");
-  return false;
-  }
-  
-}
-
-function checkMob(){
-  var mob = document.getElementById("mob");
-  var mobformat = /(7|8|9)\d{9}/;
-  if(mob.value.match(mobformat))
-  {return true;
-  }
-  else
-  {
-  alert("You have entered an invalid mobile number!");
-  return false;
-  }
-
-
-}
 
 function checkValidate(){
   var flag=0;
@@ -82,18 +56,22 @@ function checkValidate(){
     return false;
   }
 }
-  
+ 
+
+
 //Onsubmit
-subButton.addEventListener("click", function()
+subButton.addEventListener("click", function(event)
  {
   if (checkValidate()==true ) {
   
-     if(checkEmail()==true && checkPass()==true && checkMob()==true){
-       console.log("true");
+   
+      if(checkAll() == true){
+       
   
 	if (saveButton.checked == true)
   { 
     event.preventDefault();
+   
     data = getFormData();
     localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));   
    
@@ -108,7 +86,9 @@ subButton.addEventListener("click", function()
   }
   else
    { localStorage.clear(); }
-}}
+}
+else event.preventDefault();
+}
 else{
   event.preventDefault();
 }
@@ -136,4 +116,4 @@ const populateForm = () => {
 };
 
 document.onload = populateForm(); 
-  
+
